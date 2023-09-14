@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'clase-uno';
+  mensaje : string;
+  subtitulo: string;
+  fecha: Date;
+  visitas:number;
+  color:string = 'red';
+  
+  constructor() {
+    this.mensaje = 'Bienvenido a Angular';
+    this.subtitulo = 'El mejor framework de frond End';
+    this.fecha = new Date();
+    this.visitas = 100;
+ 
+
+    setInterval(()=>{
+      this.visitas++;
+    },3000);
+
+  }
 }
